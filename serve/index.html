@@ -1,0 +1,11 @@
+<html>
+	<body>
+		<h1><marquee>HELLO EARTHLING</marquee></h1>
+		<script src="http://www.java.com/js/deployJava.js"></script>
+		<script>
+			var dir = location.href.substring(0, location.href.lastIndexOf('/')+1);
+			var url = dir + "launch.jnlp";
+			deployJava.createWebStartLaunchButton(url, "1.7.0");
+		</script>
+	</body>
+</html>

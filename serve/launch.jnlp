@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="http://tspigot.student.umd.edu:8080/" href="launch.jnlp">
+	<information>
+		<title>Test Application</title>
+		<vendor>Spigot Industries, LLC</vendor>
+	</information>
+	<resources>
+		<j2se version="1.7+"
+			href="http://java.sun.com/products/autodl/j2se" />
+		<jar href="JWSCards.jar" main="true" />
+	</resources>
+	<application-desc
+		name="Test Application"
+		main-class="com.alex.cards.StartFrame"
+		width="1024"
+		height="768">
+	</application-desc>
+	<update check="background"/>
+</jnlp>
