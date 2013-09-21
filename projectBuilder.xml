@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="JWS.makejar" default="makejar" basedir=".">
-	<target name="makejar" description="Create a jar for the JWS">
-		<jar destfile="JWSCards.jar" includes="**/*.class" basedir="bin">
-			<manifest>
-				<attribute name="Main-Class" value="com.alex.cards.StartFrame" />
-				<attribute name="Permissions" value="sandbox" />
-				<attribute name="Codebase" value="tspigot.student.umd.edu" />
-			</manifest>
-		</jar>
+<project name="JWS.makejar" default="jar" basedir=".">
+	<target name="compile">
+	    <mkdir dir="bin"/>
+	    <javac srcdir="src" destdir="bin">
+	        <classpath>
+	               <fileset dir="lib">
+	                  <include name="**/*.jar" />
+	               </fileset>
+	         </classpath>
+	    </javac>
+	</target>
+
+	<target name="jar" depends="compile">
+	    <mkdir dir="build"/>
+	    <jar destfile="build/JWSCards.jar" basedir="bin" includes="**/*.class">
+	        <manifest>
+	            <attribute name="Main-Class" value="com.alex.cards.StartFrame"/>
+	        	<attribute name="Permissions" value="sandbox" />
+	        	<attribute name="Codebase" value="tspigot.student.umd.edu" />
+	        </manifest>
+	        <zipgroupfileset dir="lib" includes="**/*.jar"/>
+	    </jar>
 	</target>
 </project>

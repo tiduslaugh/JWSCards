@@ -20,7 +20,7 @@ public class StartFrame extends JFrame {
 		sp.setOpaque(true);
 		this.setContentPane(sp);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setPreferredSize(new Dimension(1024, 768));
+		this.setPreferredSize(new Dimension(800, 640));
 		pack();
 		this.setVisible(true);
 	}
